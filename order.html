@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <title>הזמנת משלוח</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body dir="rtl">
+    <header>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="pictures/slide1.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="pictures/slide2.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="pictures/slide5.jpg" alt="Third slide">
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="pictures/icons/pizza-icon.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">ראשי</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">תפריט</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="order.html">הזמנת משלוח <span class="sr-only">(current)</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <article>
+        <h2>הזמנת משלוח</h2>
+        <form>
+            <div class="form-group">
+                <label style="font-weight: bold" for="name">שם פרטי ומשפחה:</label>
+                <input type="text" name="name" id="name" /> <br />
+                <label style="font-weight: bold" for="phone">מספר טלפון:</label>
+                <input type="tel" name="phone" id="phone" pattern="[0-9]{7}" /> -
+                <select id="areacode" name="areacode">
+                    <option>050</option>
+                    <option>052</option>
+                    <option>053</option>
+                    <option>055</option>
+                    <option>02</option>
+                    <option>03</option>
+                    <option>04</option>
+                    <option>08</option>
+                    <option>09</option>
+                    <option>077</option>
+                </select>
+            </div>
+            <label style="font-weight: bold" for="orderBase">בחר את סוג ההזמנה:</label>
+            <select id="orderBase" name="orderBase">
+                <option>בחר:</option>
+                <option>פיצה משפחתית - 40 ש"ח</option>
+                <option>פיצה אישית - 20 ש"ח</option>
+                <option>סמבוסק - 20 ש"ח</option>
+                <option>סמבוסק פיצה - 20 ש"ח</option>
+                <option>סלט אישי (מגיע עם חסה, עגבניה ומלפפון) - 25 ש"ח</option>
+            </select>
+            <div class="form-check">
+                <label style="font-weight: bold">תוספות (3 ש"ח לכל תוספת):</label>
+                <br />
+                <label><input type="checkbox" name="extra" value="olive" /> זיתים</label>
+                <br />
+                <label><input type="checkbox" name="extra" value="corn" /> תירס</label>
+                <br />
+                <label><input type="checkbox" name="extra" value="onion" /> בצל</label>
+                <br />
+                <label><input type="checkbox" name="extra" value="cheese" /> בולגרית</label>
+                <br />
+                <label style="font-weight: bold">בחר שתייה - בקבוק:</label>
+                <br />
+                <label><input type="radio" name="drink" value="cola" /> קולה</label>
+                <br />
+                <label><input type="radio" name="drink" value="colazero" /> קולה זירו</label>
+                <br />
+                <label><input type="radio" name="drink" value="fuzetea" /> פיוז טי אפרסק</label>
+                <br />
+                <label><input type="radio" id="non" name="drink" value="non" /> ללא שתייה</label>
+                <br />
+            </div>
+            <button type="button" class="btn btn-dark">שלח הזמנה</button>
+        </form>
+    </article>
+
+</body>
+
+</html>
